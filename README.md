@@ -79,3 +79,5 @@ Here’s what to avoid copying:
 - **Meaningful Reviews**: Some product categories had less data, so it was harder to generate good reviews for them.
 - **Not Overfitting**: To be careful not to directly inject real data to make it more bias towards one way of giving reviews and it just repeats the same patterns.
 - **API Limits**: Was free but not sure if can concurrently hit APIs consistently so applied `time.sleep()`
+
+###  The Problem could be done in more ways than imagined like using SDV or some other GAN/VAE techniques that could be implemented for the use case or could use pre implemented libraries and make some moderate modifications.
