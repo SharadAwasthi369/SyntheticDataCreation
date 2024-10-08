@@ -49,3 +49,34 @@ To run this project, you will need:
 
 ## Another Experiment
 - Have Used SDV Libraries as well in another experiment and they can be used to model multitable scenarios along with relationship intact but takes a lot of time in respect of the time that was available only the script is available
+
+## Common Questions
+
+### 1. Why did we choose this model?
+We used the **Cohere language model** because it’s really good at generating text that sounds human. It takes into account real patterns from existing data, but still adds its own creativity to make each review unique. It can also handle both the structure (like the product details) and the free-form text (the actual review) really well.
+
+### 2. What factors were considered when making the dataset?
+Here are some of the main things we looked at:
+- **Review Length**: We wanted reviews that weren’t too long or too short, so we put a limit on how much the model could write.
+- **Variety**: We generated reviews across a range of product categories to keep things interesting and ensure different types of content.
+- **Ratings**: We made sure the ratings (e.g., 5 stars) followed a realistic pattern, just like how people rate products in real life.
+- **Quality**: The generated reviews had things like helpful votes and whether the product was verified, just like in real reviews.
+
+### 3. How do you know if the dataset is good?
+You can measure it in a few ways:
+- **Realism**: The reviews should feel like something a real person would write.
+- **Diversity**: There should be a good mix of topics and styles so that it doesn’t feel repetitive.
+- **Stats**: We can compare things like review lengths and ratings to real data to see if they match up.
+- **Model Performance**: If this data is used for training a model, you can see how well the model performs afterward.
+
+### 4. How do you make sure it’s not just copying the real data?
+Here’s what we did to avoid copying:
+- **Learning Patterns**: Instead of directly copying reviews, the model learns how reviews are generally written and then creates something new based on that.
+- **Randomness**: We added some randomness to parts like user IDs and helpful votes, so the dataset isn’t an exact match to the real data.
+- **Creative Output**: Using the Cohere model lets us generate new text every time, which keeps things fresh and prevents replication.
+
+### 5. What were the biggest challenges?
+- **Making it Real but Different**: It’s tricky to strike a balance between reviews that are realistic and making sure they aren’t too similar to each other.
+- **Meaningful Reviews**: Some product categories had less data, so it was harder to generate good reviews for them.
+- **Not Overfitting**: We had to be careful not to train the model so much on real data that it just repeats the same patterns.
+- **API Limits**: The Cohere API has limits on how fast we can generate reviews, so we had to take breaks between requests.
