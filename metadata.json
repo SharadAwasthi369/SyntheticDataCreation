@@ -1,0 +1,93 @@
+{
+    "tables": {
+        "products": {
+            "columns": {
+                "X": {
+                    "sdtype": "id"
+                },
+                "title": {
+                    "sdtype": "text",
+                    "pii": false
+                },
+                "parent_asin": {
+                    "sdtype": "id"
+                },
+                "categories": {
+                    "sdtype": "categorical"
+                },
+                "cat1": {
+                    "sdtype": "categorical"
+                },
+                "cat2": {
+                    "sdtype": "categorical"
+                },
+                "cat3": {
+                    "sdtype": "categorical"
+                },
+                "cat4": {
+                    "sdtype": "categorical"
+                },
+                "cat5": {
+                    "sdtype": "categorical"
+                },
+                "cat6": {
+                    "sdtype": "categorical"
+                }
+            },
+            "primary_key": "parent_asin"
+        },
+        "reviews": {
+            "columns": {
+                "rating": {
+                    "sdtype": "numerical",
+                    "computer_representation": "Int64"
+                },
+                "title": {
+                    "sdtype": "text",
+                    "pii": false
+                },
+                "text": {
+                    "sdtype": "text",
+                    "pii": false
+                },
+                "asin": {
+                    "sdtype": "categorical"
+                },
+                "parent_asin": {
+                    "sdtype": "id"
+                },
+                "user_id": {
+                    "sdtype": "id"
+                },
+                "timestamp": {
+                    "sdtype": "id"
+                },
+                "helpful_vote": {
+                    "sdtype": "numerical",
+                    "computer_representation": "Int64"
+                },
+                "verified_purchase": {
+                    "sdtype": "boolean"
+                },
+                "date": {
+                    "sdtype": "datetime",
+                    "datetime_format": "%Y-%m-%d"
+                },
+                "time": {
+                    "sdtype": "datetime",
+                    "datetime_format": "%H:%M:%S"
+                }
+            },
+            "primary_key": "timestamp"
+        }
+    },
+    "relationships": [
+        {
+            "parent_table_name": "products",
+            "child_table_name": "reviews",
+            "parent_primary_key": "parent_asin",
+            "child_foreign_key": "parent_asin"
+        }
+    ],
+    "METADATA_SPEC_VERSION": "V1"
+}
