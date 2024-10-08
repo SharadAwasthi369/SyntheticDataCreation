@@ -52,7 +52,7 @@ To run this project, you will need:
 
 ## Questions
 
-### 1. Why did we choose this model?
+### 1. Why choose this model?
 Used the **Cohere language model** because it’s really good at generating text that sounds human. It takes into account real patterns from existing data, but still adds its own creativity to make each review unique. It can also handle both the structure (like the product details) and the free-form text (the actual review) really well. most importantly its free no credit/debit details paywall.
 
 ### 2. What factors were considered when making the dataset?
@@ -62,13 +62,13 @@ Here are some of the main things we looked at:
 - **Ratings**: made sure the ratings (e.g., 5 stars) followed a realistic pattern, just like how people rate products in real life.
 - **Quality**: The generated reviews had things like helpful votes and whether the product was verified, just like in real reviews.
 
-### 3. How do you know if the dataset is good?
+### 3. How do we know if the dataset is good?
 - **Realism**: The reviews should feel like something a real person would write.
 - **Diversity**: There should be a good mix of topics and styles so that it doesn’t feel repetitive.
 - **Stats**: Can compare things like review lengths and ratings to real data to see if they match up.
 - **Model Performance**: If this data is used for training a model, We can see how well the model performs afterward.
 
-### 4. How do you make sure it’s not just copying the real data?
+### 4. How do we make sure it’s not just copying the real data?
 Here’s what to avoid copying:
 - **Learning Patterns**: Instead of directly copying reviews, the model learns how reviews are generally written and then creates something new based on that.
 - **Randomness**: added some randomness to parts like user IDs and helpful votes, so the dataset isn’t an exact match to the real data.
